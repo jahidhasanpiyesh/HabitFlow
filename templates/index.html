@@ -73,9 +73,10 @@
                             <tr>
                                 <th class="p-5 sticky-column text-[11px] font-extrabold text-slate-400 uppercase tracking-widest">
                                     Habit Name</th>
-                                {% for day in days_range %}
+                                {% for day in days_data %}
                                 <th class="p-3 text-center border-x border-slate-100 min-w-[48px] font-bold text-slate-500 text-xs">
-                                    <div class="opacity-40 text-[9px]">{{ day }}</div><div>{{ day }}</div>
+                                    <div class="opacity-40 text-[9px] uppercase">{{ day.name }}</div>
+                                    <div>{{ day.num }}</div>
                                 </th>
                                 {% endfor %}
                             </tr>
@@ -89,9 +90,9 @@
                                         <span class="font-bold text-slate-700 group-hover:text-blue-600 transition">{{ habit.name }}</span>
                                     </div>
                                 </td>
-                                {% for day in days_range %}
+                                {% for day in days_data %}
                                 <td class="p-3 text-center border-x border-slate-50/50">
-                                    <input type="checkbox" class="habit-check" {% if day in habit.done %}checked{% endif %}>
+                                    <input type="checkbox" class="habit-check" {% if day.num in habit.done %}checked{% endif %}>
                                 </td>
                                 {% endfor %}
                             </tr>
@@ -167,7 +168,7 @@
                 </button>
             </form>
         </div>
-    </div>
+    </div
 
     <script src="{% static 'js/script.js' %}"></script>
 </body>
