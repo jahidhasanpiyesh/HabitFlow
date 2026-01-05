@@ -1,7 +1,15 @@
 from django.shortcuts import render
 import datetime
+import calendar
+from django.utils import timezone
 
 def home(request):
+    # Real time data manipulation for current month and year.
+    today = timezone.now()
+    year = today.year
+    month = today.month
+    month_name = calendar.month_name[month][1] # Get month name
+
     demo_habits = [
         { "name": "5:30 AM Wake Up", "icon": "⏰", "done": [1, 2, 3, 5, 7, 10, 12, 14, 15, 18], "progress": 45 },
         { "name": "Deep Work (4hr)", "icon": "💻", "done": [1, 2, 4, 5, 8, 9, 11, 12, 15], "progress": 30 },
@@ -23,3 +31,6 @@ def home(request):
         'days_data': days_data, # This data is used to loop through the days calender
     }
     return render(request, 'index.html', context)
+
+def home2(request):
+    return render(request, 'home.html')

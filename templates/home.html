@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow | Global Elite</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="bolt-icon">⚡</div>
+                <h2>HabitFlow</h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item active">Leaderboard</a>
+                <a href="#" class="nav-item">Challenges</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="login-trigger">Sign In</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Global Rankings</h1>
+                <div class="time-filter">
+                    <button class="active">Monthly</button>
+                    <button>All Time</button>
+                </div>
+            </header>
+
+            <div class="podium-container">
+                <div class="podium-card second">
+                    <div class="avatar-wrap">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="User">
+                        <span class="rank-tag">2</span>
+                    </div>
+                    <h3>Sarah J.</h3>
+                    <p>LVL 42</p>
+                </div>
+                <div class="podium-card first">
+                    <div class="avatar-wrap">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="User">
+                        <span class="rank-tag">1</span>
+                    </div>
+                    <h3>Alex Mercer</h3>
+                    <p>LVL 45</p>
+                    <span class="crown">👑</span>
+                </div>
+                <div class="podium-card third">
+                    <div class="avatar-wrap">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="User">
+                        <span class="rank-tag">3</span>
+                    </div>
+                    <h3>Tanvir A.</h3>
+                    <p>LVL 12</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>User</th>
+                            <th>Habit Score</th>
+                            <th>Current Streak</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#04</td>
+                            <td><div class="user-cell"><strong>Jordan Kay</strong><span>Pro Member</span></div></td>
+                            <td>8,920 pts</td>
+                            <td>🔥 12 Days</td>
+                            <td><button class="view-btn">Profile</button></td>
+                        </tr>
+                        <tr>
+                            <td>#05</td>
+                            <td><div class="user-cell"><strong>Maria Rossi</strong><span>Free Member</span></div></td>
+                            <td>7,450 pts</td>
+                            <td>🔥 10 Days</td>
+                            <td><button class="view-btn">Profile</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
